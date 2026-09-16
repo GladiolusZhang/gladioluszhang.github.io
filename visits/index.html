@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+
+  <title>Visitors | Shuyu Zhang</title>
+  <meta name="description" content="Visitor map and statistics for this site.">
+  <link rel="canonical" href="https://gladioluszhang.github.io/visits/">
+
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body class="v2 page" itemscope itemtype="http://schema.org/WebPage">
+<div class="site-wrap">
+  <header class="site-header">
+    <div class="site-photo">
+      <a href="/"><img src="/images/profile.jpg" alt="Shuyu Zhang"></a>
+    </div>
+    <div class="site-intro">
+      <h1 class="site-name"><a href="/">Shuyu Zhang</a></h1>
+      <p class="site-role">Ph.D. Student in Software Engineering, Xidian University</p>
+      <p class="site-social">
+        <a href="https://github.com/GladiolusZhang" target="_blank" rel="noopener" title="GitHub"><i class="icon icon-github"></i></a>
+      </p>
+    </div>
+  </header>
+
+</div>
+
+<main class="main" role="main">
+  <article class="content article article-type-page" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="title">Visitors</h1>
+      <p class="text-muted">Where the people reading this site come from</p>
+    </header>
+    <div class="article-body">
+
+      <div class="vs-stats">
+        <div class="vs-stat"><b id="vs-total">—</b><span>Page views</span></div>
+        <div class="vs-stat"><b id="vs-countries">—</b><span>Countries</span></div>
+        <div class="vs-stat"><b id="vs-cities">—</b><span>Cities</span></div>
+        <div class="vs-stat"><b id="vs-today">—</b><span>Last 24 h</span></div>
+      </div>
+
+      <div id="vs-map" class="vs-map"></div>
+
+      <h2>Recent visits</h2>
+      <div class="vs-table-wrap">
+        <table class="vs-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody id="vs-rows"></tbody>
+        </table>
+      </div>
+
+      <p class="vs-note" id="vs-note"></p>
+
+      <h2>What is recorded</h2>
+      <p>Each page view stores the approximate city and country resolved from the
+      visitor's connection, the page path, and the browser's user-agent string.
+      The IP address itself is used once for the lookup and then discarded — it is
+      never stored or shown. No cookies are set and nothing is shared with
+      advertising networks.</p>
+
+      <p><a href="/">← Back to home</a></p>
+
+    </div>
+  </article>
+</main>
+
+<div class="site-wrap">
+  <footer class="site-footer">
+    <ul class="site-footer-links">
+      <li><a href="/archives">Notes</a></li>
+      <li><a href="https://github.com/GladiolusZhang" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+    <div class="site-visitor" id="site-visitor" hidden></div>
+    <div>&copy; 2025 Shuyu Zhang</div>
+  </footer>
+</div>
+
+<script src="/leaflet/leaflet.js"></script>
+<script src="/js/visitor-config.js"></script>
+<script src="/js/visits.js"></script>
+<script src="/js/visitor-log.js" defer></script>
+</body>
+</html>
