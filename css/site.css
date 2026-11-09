@@ -373,6 +373,22 @@ a.site-tag:hover {
    7. 论文
    -------------------------------------------------------------------------- */
 
+/* 年份分组标题：细横线 + 小号字，保持 CV 的克制感 */
+.site-pub-year {
+  margin: 2.4rem 0 1.4rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  color: var(--ink-mute);
+}
+
+.site-pub-year:first-of-type {
+  margin-top: 0;
+}
+
 .site-paper {
   margin-bottom: 22px;
   line-height: 1.6;
@@ -1355,6 +1371,9 @@ body.v2 #comments {
 
 @media print {
   @page {
+    /* 明确 A4：否则 Chrome 会跟随系统默认纸张（美区是 Letter，比 A4 矮 18mm），
+       同一份 CV 在不同机器上页数会不一样 */
+    size: A4;
     margin: 14mm 16mm;
   }
 
@@ -1428,6 +1447,14 @@ body.v2 #comments {
   .site-sec h3 {
     margin: 2.4mm 0 1.2mm;
     font-size: 10.5pt;
+  }
+
+  /* 年份分组在纸上压缩：只留一条细线，别把 CV 撑到第 4 页 */
+  .site-pub-year {
+    margin: 2.2mm 0 1.2mm;
+    padding-bottom: 0.4mm;
+    font-size: 9pt;
+    letter-spacing: 0.06em;
   }
 
   .site-paper {
